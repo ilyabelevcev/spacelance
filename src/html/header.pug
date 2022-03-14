@@ -1,3 +1,29 @@
 header.header#header
    div.container.header-container 
-      
+      nav.header__nav
+         div.nav-logo
+            img.logo(src="@img/logo.svg", alt="spacelance")
+         ul.nav-list 
+            li.list-item
+               a.item-link(href="#") Home
+            li.list-item
+               a.item-link(href="#") Find work
+            li.list-item
+               a.item-link(href="#") Find Freelancers
+            li.list-item
+               a.item-link(href="#") Log in
+            li.list-item
+               a.item-link(href="#") Sign in
+         div.nav-btn
+            a.btn-link(href="#") Post a project
+      div.header__content 
+         div.content-freelancers
+            h1.content-heading Are you looking for Freelancers?
+            p.content-descr Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice
+            div.freelancers-info 
+               button.btn-link.freelancers-btn Hire a freelancer
+               form.freelancers-search(action="#")
+                  input.freelancers-input(type="search")
+                  button.search-btn
+                     img(src="@img/search-freelancers.svg", alt="Search")
+         //- before - картинка

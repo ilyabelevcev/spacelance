@@ -5,6 +5,29 @@ html(lang="ru")
       include html/header 
       main 
          section.opportunities
-            div.container 
+            div.container.opportunities-container
+               ul.opportunities__list 
+                  li.list-item
+                     h3.opportunities__heading Create Account
+                     div.opportunities__descr First you have to create a account  here
+                  li.list-item
+                     h3.opportunities__heading Search work
+                     div.opportunities__descr Search the best freelance work here
+                  li.list-item 
+                     h3.opportunities__heading Save and Apply
+                     div.opportunities__descr Apply or save and start your work
+         section.freelancers
+            div.container.freelancers-container
+               div.freelancers__info 
+                  img.woman-img(src="@img/woman.jpg", alt="")
+                  div.amount-wrapper
+                     span.number 500+
+                     span.text freelancers
+                  div.amount-wrapper
+                     span.number 300+
+                     span.text freelance work Posted
+               div.freelancers__content
+         section.works 
+            div.container.works-container
       include html/footer 
       script(src="js/app.min.js") 

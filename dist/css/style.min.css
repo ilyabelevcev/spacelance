@@ -260,3 +260,19 @@ button {
   max-width: 1295px;
   margin: 0 auto;
 }
+
+.header {
+  padding-top: 51px;
+  background: url("../img/bg-header.jpg");
+}
+.header .header-container .header__nav {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 15px 25px 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-container .header__nav .nav-list {
+  display: flex;
+}

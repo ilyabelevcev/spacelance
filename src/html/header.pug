@@ -6,7 +6,7 @@ header.header#header
                img.logo(src="@img/logo.svg", alt="spacelance")
          ul.nav-list 
             li.list-item
-               a.item-link(href="#") Home
+               a.item-link.is-active(href="#") Home
             li.list-item
                a.item-link(href="#") Find work
             li.list-item
@@ -24,7 +24,7 @@ header.header#header
             div.freelancers-info 
                button.btn-link.freelancers-btn Hire a freelancer
                form.freelancers-search(action="#")
-                  input.freelancers-input(type="search")
+                  input.freelancers-input(type="search", placeholder="search freelance work")
                   button.search-btn
                      svg(width='25' height='25' viewbox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
                         rect(width='25' height='25' fill='url(#pattern0)')

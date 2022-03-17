@@ -399,6 +399,60 @@ button {
 .footer .footer-container .footer__content-list {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 97px;
+}
+.footer .footer-container .footer__content-list .footer__list-item:first-child {
+  width: 24.3%;
+}
+.footer .footer-container .footer__content-list .footer__list-item .footer__logo .logo-link {
+  display: flex;
+}
+.footer .footer-container .footer__content-list .footer__list-item .footer__logo .logo-link .logo {
+  width: 100%;
+}
+.footer .footer-container .footer__content-list .footer__list-item .footer__descr {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 27px;
+}
+.footer .footer-container .footer__content-list .footer__list-item .footer__socials {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-container .footer__content-list .footer__list-item .footer__socials .social-item:not(:last-child) {
+  margin-right: 30px;
+}
+.footer .footer-container .footer__content-list .footer__list-item .footer__item-heading {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+}
+.footer .footer-container .footer__content-list .footer__list-item .links-list .item-link {
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.footer .footer-container .footer__content-list .footer__list-item .links-list .item-link.location {
+  padding-left: 33px;
+  background-image: url("../img/location.svg");
+  margin-bottom: 32px;
+}
+.footer .footer-container .footer__content-list .footer__list-item .links-list .item-link.phone {
+  padding-left: 35px;
+  background-image: url("../img/phone-voice.svg");
+  margin-bottom: 32px;
+}
+.footer .footer-container .footer__content-list .footer__list-item .links-list .item-link.mail {
+  padding-left: 35px;
+  background-image: url("../img/email.svg");
+}
+.footer .footer-container .footer__content-list .footer__list-item .links-list .item-link .link {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
 }
 .footer .footer-container .footer__copyright {
   text-align: center;

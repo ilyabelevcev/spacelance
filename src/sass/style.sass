@@ -125,6 +125,9 @@ button
                      align-items: center
                      justify-content: center
 
+// main
+.opportunities
+   .opportunities-container
 // Footer
 .footer
    background-color: #fff
@@ -135,18 +138,53 @@ button
       .footer__content-list
          display: flex
          justify-content: space-between
+         margin-bottom: 97px
          .footer__list-item
+            &:first-child
+               width: 24.3%
             .footer__logo
                .logo-link
+                  display: flex
                   .logo
+                     width: 100%
             .footer__descr
+               margin-bottom: 24px
+               font-size: 18px
+               line-height: 27px
             .footer__socials
+               display: flex
+               align-items: center
                .social-item
+                  &:not(:last-child)
+                     margin-right: 30px
                   .social-link
             .footer__item-heading
+               margin-top: 12px
+               margin-bottom: 20px
+               font-size: 24px
+               line-height: 36px
+               font-weight: 500
             .links-list 
                .item-link
+                  background-repeat: no-repeat
+                  background-position: left center
+                  &.location
+                     padding-left: 33px
+                     background-image: url('@img/location.svg')
+                     margin-bottom: 32px
+                  &.phone
+                     padding-left: 35px
+                     background-image: url('@img/phone-voice.svg')
+                     margin-bottom: 32px
+                  &.mail
+                     padding-left: 35px
+                     background-image: url('@img/email.svg')
                   .link
+                     display: flex
+                     align-items: center
+                     font-size: 18px
+                     line-height: 27px
+                     font-weight: 400
       .footer__copyright
          text-align: center
          .copyright-descr

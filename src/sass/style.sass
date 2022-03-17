@@ -170,19 +170,54 @@ button
 .freelancers
    .freelancers-container
       display: flex
-      align-items: center
       justify-content: space-between
+      margin-bottom: 176px
       .freelancers__info
+         position: relative
          .woman-img
          .amount-wrapper
+            position: absolute
+            background-color: #fff
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+            border-radius: 20px
+            display: inline-block
+            text-align: center
+            max-width: 300px
             &.freelancers
+               top: 38px
+               left: 298px
+               padding: 27px 13px
             &.works
+               right: -50px
+               bottom: 230px
+               padding: 23px 16px
             .number
+               color: #1E88E5
+               font-size: 36px
+               line-height: 54px
+               font-weight: 600
             .text
+               color: #9d9d9d
+               font-size: 24px
+               line-height: 36px
       .freelancers__content
+         width: 39.5%
          text-align: right
-         .freelancers-heading
          .freelancers-descr
+            color: #9d9d9d
+            font-size: 24px
+            line-height: 36px
+            font-weight: 400
+
+// Works
+.works
+   .works-container
+      .works-title
+         .works-subtitle
+            font-size: 36px
+            line-height: 54px
+            color: #9d9d9d
+         .works-heading
 // Footer
 .footer
    background-color: #fff
@@ -197,7 +232,7 @@ button
          .footer__list-item
             &:first-child
                width: 24.3%
-            .footer__logo
+            .footer__2
                .logo-link
                   display: flex
                   .logo

@@ -29,9 +29,6 @@ button
    margin: 0 auto
 .is-active
    color: #1E88E5
-.btn-link
-   font-weight: 600
-   color: #fff
 .section-heading
    font-size: 56px
    line-height: 84px
@@ -63,12 +60,22 @@ button
             display: flex
             .list-item
                .item-link
+                  transition: color 0.3s linear
+                  &:hover
+                     color: #1E88E5
                &:not(:last-child)
                   margin-right: 35px
          .nav-btn
-            padding: 11px 43px
-            border-radius: 50px
-            background-color: #1E88E5
+            .btn-link
+               color: #fff
+               font-weight: 600
+               padding: 11px 43px
+               border-radius: 50px
+               background-color: #1E88E5
+               transition: background-color 0.2s linear, border-radius 0.2s linear
+               &:hover
+                  background-color: #005198
+                  border-radius: 10px
       .header__content
          position: relative
          padding-bottom: 284px
@@ -103,9 +110,15 @@ button
                .freelancers-btn
                   padding: 20px 24px
                   background-color: #1E88E5
+                  font-weight: 600
+                  color: #fff
                   border-radius: 10px
                   font-size: 24px
                   line-height: 36px
+                  transition: background-color 0.2s linear, border-radius 0.2s linear
+                  &:hover
+                     background-color: #005198
+                     border-radius: 5px
                .freelancers-search
                   display: flex
                   position: relative
@@ -178,7 +191,6 @@ button
       margin-bottom: 176px
       .freelancers__info
          position: relative
-         .woman-img
          .amount-wrapper
             position: absolute
             background-color: #fff
@@ -216,10 +228,13 @@ button
 // works
 .works
    .works-container
+      max-width: 1344px
       .title-wrapper
          display: flex
+         padding: 0px 38.5px
          justify-content: space-between
          align-items: center
+         margin-bottom: 55px
          .works__title
             .works-subtitle
                font-size: 36px
@@ -236,6 +251,7 @@ button
                &.prev
                   margin-right: 25px
       .carousel
+         max-width: 1344px
          padding: 0
          .slick-track
             padding-bottom: 73px
@@ -243,13 +259,7 @@ button
             .slick-slide
                min-width: 372px
                display: flex
-               margin: 0px 36px
-               &:first-child
-                  margin-left: 2px
-               &:nth-child(3n+3)
-                  margin-right: 0
-               &:nth-child(4n+4)
-                  margin-left: 0px
+               justify-content: center
          .carousel__item
             background-color: #fff
             padding: 20px
@@ -319,7 +329,6 @@ button
                .social-item
                   &:not(:last-child)
                      margin-right: 30px
-                  .social-link
             .footer__item-heading
                margin-top: 12px
                margin-bottom: 20px

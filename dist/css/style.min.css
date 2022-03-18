@@ -396,11 +396,6 @@ button {
   color: #1E88E5;
 }
 
-.btn-link {
-  font-weight: 600;
-  color: #fff;
-}
-
 .section-heading {
   font-size: 56px;
   line-height: 84px;
@@ -436,13 +431,26 @@ button {
 .header .header-container .header__nav .nav-list {
   display: flex;
 }
+.header .header-container .header__nav .nav-list .list-item .item-link {
+  transition: color 0.3s linear;
+}
+.header .header-container .header__nav .nav-list .list-item .item-link:hover {
+  color: #1E88E5;
+}
 .header .header-container .header__nav .nav-list .list-item:not(:last-child) {
   margin-right: 35px;
 }
-.header .header-container .header__nav .nav-btn {
+.header .header-container .header__nav .nav-btn .btn-link {
+  color: #fff;
+  font-weight: 600;
   padding: 11px 43px;
   border-radius: 50px;
   background-color: #1E88E5;
+  transition: background-color 0.2s linear, border-radius 0.2s linear;
+}
+.header .header-container .header__nav .nav-btn .btn-link:hover {
+  background-color: #005198;
+  border-radius: 10px;
 }
 .header .header-container .header__content {
   position: relative;
@@ -484,9 +492,16 @@ button {
 .header .header-container .header__content .content-freelancers .freelancers-info .freelancers-btn {
   padding: 20px 24px;
   background-color: #1E88E5;
+  font-weight: 600;
+  color: #fff;
   border-radius: 10px;
   font-size: 24px;
   line-height: 36px;
+  transition: background-color 0.2s linear, border-radius 0.2s linear;
+}
+.header .header-container .header__content .content-freelancers .freelancers-info .freelancers-btn:hover {
+  background-color: #005198;
+  border-radius: 5px;
 }
 .header .header-container .header__content .content-freelancers .freelancers-info .freelancers-search {
   display: flex;
@@ -610,10 +625,15 @@ button {
   font-weight: 400;
 }
 
+.works .works-container {
+  max-width: 1344px;
+}
 .works .works-container .title-wrapper {
   display: flex;
+  padding: 0px 38.5px;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 55px;
 }
 .works .works-container .title-wrapper .works__title .works-subtitle {
   font-size: 36px;
@@ -634,6 +654,7 @@ button {
   margin-right: 25px;
 }
 .works .works-container .carousel {
+  max-width: 1344px;
   padding: 0;
 }
 .works .works-container .carousel .slick-track {
@@ -643,16 +664,7 @@ button {
 .works .works-container .carousel .slick-track .slick-slide {
   min-width: 372px;
   display: flex;
-  margin: 0px 36px;
-}
-.works .works-container .carousel .slick-track .slick-slide:first-child {
-  margin-left: 2px;
-}
-.works .works-container .carousel .slick-track .slick-slide:nth-child(3n+3) {
-  margin-right: 0;
-}
-.works .works-container .carousel .slick-track .slick-slide:nth-child(4n+4) {
-  margin-left: 0px;
+  justify-content: center;
 }
 .works .works-container .carousel .carousel__item {
   background-color: #fff;

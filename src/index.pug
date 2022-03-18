@@ -40,14 +40,23 @@ html(lang="ru")
                   p.freelancers-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat bibendum ornare urna, cursus eget convallis. Feugiat imperdiet posuere justo, ultrices interdum sed orci nunc, mattis. Ipsum viverra viverra neque adipiscing arcu, quam dictum. Dui mi viverra dui, sit accumsan, tincidunt massa. Dui cras magnis.
          section.works 
             div.container.works-container
-               div.works__title 
-                  span.works-subtitle The latest freelance work!
-                  h2.section-heading.works-heading 
-                     | Recently Posted 
-                     span Works
-               div.carousel 
-                  div.carousel__item
+               div.title-wrapper 
+                  div.works__title 
+                     span.works-subtitle The latest freelance work!
+                     h2.section-heading.works-heading 
+                        | Recently Posted 
+                        span Works
+                  div.works__slider-btn
+                     button.prev 
+                        svg(width='33' height='33' viewbox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                           path(d='M28.8749 15.125H8.81916L16.097 7.84714L14.1528 5.90289L3.55566 16.5L14.1528 27.0971L16.097 25.1529L8.81916 17.875H28.8749V15.125Z' fill='#1E88E5')
+                     button.next 
+                        svg(width='33' height='33' viewbox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg')
+                           path(d='M4.12509 15.125H24.1808L16.903 7.84714L18.8472 5.90289L29.4443 16.5L18.8472 27.0971L16.903 25.1529L24.1808 17.875H4.12509V15.125Z' fill='#1E88E5')
+               ul.carousel
+                  li.carousel__item
                      div.item-icon
+                        img.icon-img(src="@img/logo-design.svg", alt="Logo Design")
                      div.item-heading Logo Design
                      p.item-descr Need a professional logo with writing underneath for our jewellery company
                      div.item-info 
@@ -55,23 +64,115 @@ html(lang="ru")
                            | Highest bid
                            span $500
                         a.info-link Apply now
-                  div.carousel__item
+                  li.carousel__item
                      div.item-icon
+                        img.icon-img(src="@img/graphic-design.svg", alt="Graphic Design")
                      div.item-heading Graphic Design
-                     div.item-descr We need a graphic designer with UI/UX skills for our Furniture company
+                     p.item-descr We need a graphic designer with UI/UX skills for our Furniture company
                      div.item-info 
                         div.info-price 
                            | Highest bid
                            span $500
                         a.info-link Apply now
-                  div.carousel__item
+                  li.carousel__item
                      div.item-icon
+                        img.icon-img(src="@img/seo.svg", alt="Need a SEO")
                      div.item-heading Need a SEO
-                     div.item-descr Need a SEO for our company who will let our company to a higher level
+                     p.item-descr Need a SEO for our company who will let our company to a higher level
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $300
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/logo-design.svg", alt="Logo Design")
+                     div.item-heading Logo Design
+                     p.item-descr Need a professional logo with writing underneath for our jewellery company
                      div.item-info 
                         div.info-price 
                            | Highest bid
                            span $500
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/graphic-design.svg", alt="Graphic Design")
+                     div.item-heading Graphic Design
+                     p.item-descr We need a graphic designer with UI/UX skills for our Furniture company
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $500
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/seo.svg", alt="Need a SEO")
+                     div.item-heading Need a SEO
+                     p.item-descr Need a SEO for our company who will let our company to a higher level
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $300
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/logo-design.svg", alt="Logo Design")
+                     div.item-heading Logo Design
+                     p.item-descr Need a professional logo with writing underneath for our jewellery company
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $500
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/graphic-design.svg", alt="Graphic Design")
+                     div.item-heading Graphic Design
+                     p.item-descr We need a graphic designer with UI/UX skills for our Furniture company
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $500
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/seo.svg", alt="Need a SEO")
+                     div.item-heading Need a SEO
+                     p.item-descr Need a SEO for our company who will let our company to a higher level
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $300
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/logo-design.svg", alt="Logo Design")
+                     div.item-heading Logo Design
+                     p.item-descr Need a professional logo with writing underneath for our jewellery company
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $500
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/graphic-design.svg", alt="Graphic Design")
+                     div.item-heading Graphic Design
+                     p.item-descr We need a graphic designer with UI/UX skills for our Furniture company
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $500
+                        a.info-link Apply now
+                  li.carousel__item
+                     div.item-icon
+                        img.icon-img(src="@img/seo.svg", alt="Need a SEO")
+                     div.item-heading Need a SEO
+                     p.item-descr Need a SEO for our company who will let our company to a higher level
+                     div.item-info 
+                        div.info-price 
+                           | Highest bid
+                           span $300
                         a.info-link Apply now
       include html/footer 
       script(src="js/app.min.js") 

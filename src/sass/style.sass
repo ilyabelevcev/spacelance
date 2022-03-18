@@ -1,8 +1,9 @@
 // FONTS
-// @import 'fonts'
+@import 'fonts'
 // NORMALIZE
-@import 'normalize'
-
+@import './libs/normalize'
+// SLICK
+@import './libs/slick'
 
 
 // ALL STYLES 
@@ -24,7 +25,7 @@ button
    cursor: pointer
    background-color: transparent
 .container
-   max-width: 1295px
+   max-width: 1267px
    margin: 0 auto
 .is-active
    color: #1E88E5
@@ -42,6 +43,7 @@ button
 .header
    background: url('@img/bg-header.png') no-repeat center bottom/cover
    .header-container
+      max-width: 1295px
       padding-top: 51px
       .header__nav
          background-color: #fff
@@ -133,6 +135,7 @@ button
                      justify-content: center
 
 // main
+// opportunities
 .opportunities
    margin-bottom: 39px
    position: relative
@@ -167,6 +170,7 @@ button
                font-size: 24px
                line-height: 36px
 
+// freelancers
 .freelancers
    .freelancers-container
       display: flex
@@ -209,15 +213,78 @@ button
             line-height: 36px
             font-weight: 400
 
-// Works
+// works
 .works
    .works-container
-      .works__title
-         .works-subtitle
-            font-size: 36px
-            line-height: 54px
-            color: #9d9d9d
-         .works-heading
+      .title-wrapper
+         display: flex
+         justify-content: space-between
+         align-items: center
+         .works__title
+            .works-subtitle
+               font-size: 36px
+               line-height: 54px
+               color: #9d9d9d
+         .works__slider-btn
+            display: flex
+            .slick-arrow
+               background: #FFFFFF 
+               box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+               border-radius: 50px
+               padding: 15px
+               display: flex
+               &.prev
+                  margin-right: 25px
+      .carousel
+         padding: 0
+         .slick-track
+            display: flex
+            .slick-slide
+               min-width: 372px
+               display: flex
+               margin: 0px 71px 0px 2px
+               &:nth-child(3n+3)
+                  margin-right: 0
+         .carousel__item
+            background-color: #fff
+            padding: 20px
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+            border-radius: 30px
+            max-width: 372px
+            text-align: center
+            .item-icon
+               margin-bottom: 30px
+               .icon-img
+                  margin: 0 auto
+            .item-heading
+               font-size: 32px
+               line-height: 48px
+               font-weight: 500
+               margin-bottom: 5px
+            .item-descr
+               font-size: 24px
+               line-height: 36px
+               font-weight: 400
+               margin-bottom: 30px
+               color: #9D9D9D
+            .item-info
+               display: flex
+               align-items: center
+               justify-content: space-between
+               .info-price
+                  font-size: 24px
+                  line-height: 36px
+                  font-weight: 500
+                  span
+                     font-size: 28px
+                     line-height: 42px
+                     display: block
+               .info-link
+                  font-size: 24px
+                  line-height: 36px
+                  font-weight: 500
+                  text-decoration: underline
+                  color: #1E88E5
 // Footer
 .footer
    background-color: #fff
@@ -232,7 +299,7 @@ button
          .footer__list-item
             &:first-child
                width: 24.3%
-            .footer__2
+            .footer__logo
                .logo-link
                   display: flex
                   .logo

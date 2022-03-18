@@ -767,6 +767,12 @@ button {
   display: flex;
   align-items: center;
 }
+.footer .footer-container .footer__content-list .footer__list-item .footer__socials .social-item .link-icon path {
+  transition: fill 0.1s linear;
+}
+.footer .footer-container .footer__content-list .footer__list-item .footer__socials .social-item:hover .link-icon path {
+  fill: #1E88E5;
+}
 .footer .footer-container .footer__content-list .footer__list-item .footer__socials .social-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -801,6 +807,10 @@ button {
   font-size: 18px;
   line-height: 27px;
   font-weight: 400;
+  transition: color 0.2s linear;
+}
+.footer .footer-container .footer__content-list .footer__list-item .links-list .item-link .link:hover {
+  color: #1E88E5;
 }
 .footer .footer-container .footer__copyright {
   text-align: center;

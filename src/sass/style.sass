@@ -344,6 +344,13 @@ button
                display: flex
                align-items: center
                .social-item
+                  .link-icon
+                     path
+                        transition: fill 0.1s linear
+                  &:hover
+                     .link-icon
+                        path
+                           fill: #1E88E5
                   &:not(:last-child)
                      margin-right: 30px
             .footer__item-heading
@@ -373,6 +380,9 @@ button
                      font-size: 18px
                      line-height: 27px
                      font-weight: 400
+                     transition: color 0.2s linear
+                     &:hover
+                        color: #1E88E5
       .footer__copyright
          text-align: center
          .copyright-descr

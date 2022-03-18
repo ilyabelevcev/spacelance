@@ -238,13 +238,18 @@ button
       .carousel
          padding: 0
          .slick-track
+            padding-bottom: 73px
             display: flex
             .slick-slide
                min-width: 372px
                display: flex
-               margin: 0px 71px 0px 2px
+               margin: 0px 36px
+               &:first-child
+                  margin-left: 2px
                &:nth-child(3n+3)
                   margin-right: 0
+               &:nth-child(4n+4)
+                  margin-left: 0px
          .carousel__item
             background-color: #fff
             padding: 20px

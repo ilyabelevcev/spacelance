@@ -529,10 +529,15 @@ button {
   background-color: #1E88E5;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s linear, border-radius 0.2s linear;
+}
+.header .header-container .header__content .content-freelancers .freelancers-info .freelancers-search .search-btn:hover {
+  background-color: #005198;
+  border-radius: 10px;
 }
 
 .opportunities {
@@ -649,9 +654,19 @@ button {
   border-radius: 50px;
   padding: 15px;
   display: flex;
+  transition: background-color 0.2s linear;
+}
+.works .works-container .title-wrapper .works__slider-btn .slick-arrow .btn-icon path {
+  transition: fill 0.2s linear;
 }
 .works .works-container .title-wrapper .works__slider-btn .slick-arrow.prev {
   margin-right: 25px;
+}
+.works .works-container .title-wrapper .works__slider-btn .slick-arrow:hover {
+  background-color: #1E88E5;
+}
+.works .works-container .title-wrapper .works__slider-btn .slick-arrow:hover .btn-icon path {
+  fill: #fff;
 }
 .works .works-container .carousel {
   max-width: 1344px;
@@ -666,7 +681,7 @@ button {
   display: flex;
   justify-content: center;
 }
-.works .works-container .carousel .carousel__item {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
@@ -674,46 +689,51 @@ button {
   max-width: 372px;
   text-align: center;
 }
-.works .works-container .carousel .carousel__item .item-icon {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-icon {
   margin-bottom: 30px;
 }
-.works .works-container .carousel .carousel__item .item-icon .icon-img {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-icon .icon-img {
   margin: 0 auto;
 }
-.works .works-container .carousel .carousel__item .item-heading {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-heading {
   font-size: 32px;
   line-height: 48px;
   font-weight: 500;
   margin-bottom: 5px;
 }
-.works .works-container .carousel .carousel__item .item-descr {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-descr {
   font-size: 24px;
   line-height: 36px;
   font-weight: 400;
   margin-bottom: 30px;
   color: #9D9D9D;
 }
-.works .works-container .carousel .carousel__item .item-info {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.works .works-container .carousel .carousel__item .item-info .info-price {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info .info-price {
   font-size: 24px;
   line-height: 36px;
   font-weight: 500;
 }
-.works .works-container .carousel .carousel__item .item-info .info-price span {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info .info-price span {
   font-size: 28px;
   line-height: 42px;
   display: block;
 }
-.works .works-container .carousel .carousel__item .item-info .info-link {
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info .info-link {
   font-size: 24px;
   line-height: 36px;
   font-weight: 500;
   text-decoration: underline;
   color: #1E88E5;
+  transition: color 0.2s linear, text-decoration 0.2s linear;
+}
+.works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info .info-link:hover {
+  color: #005198;
+  text-decoration: none;
 }
 
 .footer {

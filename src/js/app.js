@@ -8,7 +8,7 @@ $(".carousel").slick({
    infinite: false,
    slidesToShow: 3, 
    speed: 800,
-   slidesToScroll: 3,
+   slidesToScroll: 1,
    centerPadding: '0',
    prevArrow: $('.prev'),
    nextArrow: $('.next'),

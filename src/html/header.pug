@@ -1,5 +1,5 @@
 header.header#header
-   div.container.header-container 
+   div.container.header-container
       nav.header__nav
          div.nav-logo
             a.logo-link(href="#")
@@ -17,6 +17,26 @@ header.header#header
                a.item-link(href="#") Sign in
          div.nav-btn
             a.btn-link(href="#") Post a project
+         div.header__burger
+            div.burger-menu
+               span
+            div.burger-nav
+               div.burger-logo
+                  a.logo-link(href="#") 
+                     img.logo(src="@img/logo.svg", alt="spacelance")
+               ul.menu.burger-list
+                  li.menu-item
+                     a.item-link.is-active(href="#") Home
+                  li.menu-item
+                     a.item-link(href="#") Find work
+                  li.menu-item
+                     a.item-link(href="#") Find Freelancers
+                  li.menu-item
+                     a.item-link(href="#") Log in
+                  li.menu-item
+                     a.item-link(href="#") Sign in
+               div.burger-btn
+                  a.btn-link(href="#") Post a project
       div.header__content 
          div.content-freelancers
             h1.content-heading Are you looking for Freelancers?

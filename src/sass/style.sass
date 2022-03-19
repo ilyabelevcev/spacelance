@@ -57,6 +57,7 @@ button
       max-width: 1295px
       padding-top: 51px
       .header__nav
+         z-index: 100
          background-color: $color3
          border-radius: 50px
          padding: 15px 25px 15px 20px
@@ -90,6 +91,69 @@ button
                &:hover
                   background-color: $color1
                   border-radius: 10px
+         .header__burger
+            .burger-menu
+               position: relative
+               width: 40px 
+               height: 30px
+               display: block
+               margin-left: 10px
+               span,&::after,&::before
+                  height: 3px
+                  width: 100%
+                  position: absolute
+                  background: #515758
+                  margin: 0 auto
+               span
+                  top: 14px
+               &::after,&::before
+                  content: ''
+               &::after
+                  bottom: 0px
+               &::before
+                  top: 0px
+               &.open-menu
+                  span
+                     opacity: 0.5
+                     transition: 0.5s
+                  &::before
+                     transform: rotate(38deg)
+                     top: 13px
+                     transition: 0.4s
+                  &::after
+                     transform: rotate(-38deg)
+                     bottom: 13px
+                     transition: 0.4s
+            .burger-nav
+               display: none //изм
+               position: absolute
+               right: 30px
+               // display: block 
+               .burger-logo
+                  .logo-link
+                     .logo
+               .burger-list
+                  display: flex
+                  position: relative
+                  z-index: 2
+                  &.menu
+                  .menu-item
+                     margin: 0px 0px 0px 36px
+                     font-size: 16px
+                     text-transform: uppercase
+                     text-decoration: none
+                     .item-link
+               .burger-btn
+                  .btn-link
+                     color: $color3
+                     font-weight: 600
+                     padding: 11px 43px
+                     border-radius: 50px
+                     background-color: $color0
+                     transition: background-color 0.2s linear, border-radius 0.2s linear
+                     &:hover
+                        background-color: $color1
+                        border-radius: 10px
       .header__content
          position: relative
          padding-bottom: 284px
@@ -331,6 +395,7 @@ button
                         &:hover
                            color: $color1
                            text-decoration: none
+
 // Footer
 .footer
    background-color: $color3
@@ -409,10 +474,14 @@ button
    $lhFooter: 27px
    $fzLittle: 15px // изм
    $lhLittle: 20px // изм
-   $fzMid: 24px 
-   $lhMid: 36px
-   $fzBig: 36px 
-   $lhBig: 54px
+   $fzMid: 20px // изм
+   $lhMid: 30px // изм
+   $fzBig: 30px // изм
+   $lhBig: 40px // изм
+   .section-heading
+      font-size: 40px
+      line-height: 60px
+      margin-bottom: 0
    .container
       width: 95%
       max-width: none
@@ -421,14 +490,6 @@ button
          .header__nav
             font-size: $fzLittle
             line-height: $lhLittle
-            .nav-logo
-               .logo-link
-            .nav-list
-               .list-item
-                  .item-link
-                  &:not(:last-child)
-            .nav-btn
-               .btn-link
          .header__content
             .content-freelancers
                &::after
@@ -445,10 +506,69 @@ button
                   justify-content: normal
                   .freelancers-btn
                      margin-bottom: 20px
-                  .freelancers-search
-                     .freelancers-input
-                     .search-btn
+   
+   .opportunities
+      .opportunities-container
+         padding: 30px 10px
+         .opportunities__list
+            align-items: flex-start
+            .list-item
+               .opportunities__descr
+                  font-size: $fzMid
+                  line-height: $lhMid
 
+   .freelancers
+      .freelancers-container
+         margin-bottom: 60px
+         .freelancers__info
+            width: 60%
+            .woman-img
+               width: 80%
+            .amount-wrapper
+               &.freelancers
+                  top: 28px
+                  left: 230px
+                  padding: 15px 10px
+               &.works
+                  right: 20px
+                  bottom: 200px
+                  padding: 10px 15px
+               .number
+                  font-size: $fzBig
+                  line-height: $lhBig
+               .text
+                  font-size: $fzMid
+                  line-height: $lhMid
+         .freelancers__content
+            .freelancers-descr
+               font-size: $fzMid
+               line-height: $lhMid
+
+   .works
+      .works-container
+         .title-wrapper
+            .works__title
+               .works-subtitle
+            .works__slider-btn
+               .slick-arrow
+                  .btn-icon
+                  &.prev
+         .carousel
+            .slick-track
+               .slick-slide
+                  .carousel__item
+                     .item-icon
+                        .icon-img
+                     .item-heading
+                     .item-descr
+                     .item-info
+                        .info-price
+                           span
+                              font-size: 28px
+                              line-height: 42px
+                        .info-link
+                           font-size: $fzMid
+                           line-height: $lhMid
 @media screen and (max-width: 1023px)
    
 @media screen and (max-width: 991px)

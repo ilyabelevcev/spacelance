@@ -415,6 +415,7 @@ button {
   padding-top: 51px;
 }
 .header .header-container .header__nav {
+  z-index: 100;
   background-color: #fff;
   border-radius: 50px;
   padding: 15px 25px 15px 20px;
@@ -450,6 +451,74 @@ button {
   transition: background-color 0.2s linear, border-radius 0.2s linear;
 }
 .header .header-container .header__nav .nav-btn .btn-link:hover {
+  background-color: #005198;
+  border-radius: 10px;
+}
+.header .header-container .header__nav .header__burger .burger-menu {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: block;
+  margin-left: 10px;
+}
+.header .header-container .header__nav .header__burger .burger-menu span, .header .header-container .header__nav .header__burger .burger-menu::after, .header .header-container .header__nav .header__burger .burger-menu::before {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background: #515758;
+  margin: 0 auto;
+}
+.header .header-container .header__nav .header__burger .burger-menu span {
+  top: 14px;
+}
+.header .header-container .header__nav .header__burger .burger-menu::after, .header .header-container .header__nav .header__burger .burger-menu::before {
+  content: "";
+}
+.header .header-container .header__nav .header__burger .burger-menu::after {
+  bottom: 0px;
+}
+.header .header-container .header__nav .header__burger .burger-menu::before {
+  top: 0px;
+}
+.header .header-container .header__nav .header__burger .burger-menu.open-menu span {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.header .header-container .header__nav .header__burger .burger-menu.open-menu::before {
+  transform: rotate(38deg);
+  top: 13px;
+  transition: 0.4s;
+}
+.header .header-container .header__nav .header__burger .burger-menu.open-menu::after {
+  transform: rotate(-38deg);
+  bottom: 13px;
+  transition: 0.4s;
+}
+.header .header-container .header__nav .header__burger .burger-nav {
+  display: none;
+  position: absolute;
+  right: 30px;
+}
+.header .header-container .header__nav .header__burger .burger-nav .burger-list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.header .header-container .header__nav .header__burger .burger-nav .burger-list .menu-item {
+  margin: 0px 0px 0px 36px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header .header-container .header__nav .header__burger .burger-nav .burger-btn .btn-link {
+  color: #fff;
+  font-weight: 600;
+  padding: 11px 43px;
+  border-radius: 50px;
+  background-color: #1E88E5;
+  transition: background-color 0.2s linear, border-radius 0.2s linear;
+}
+.header .header-container .header__nav .header__burger .burger-nav .burger-btn .btn-link:hover {
   background-color: #005198;
   border-radius: 10px;
 }
@@ -823,6 +892,12 @@ button {
 }
 
 @media screen and (max-width: 1199px) {
+  .section-heading {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 0;
+  }
+
   .container {
     width: 95%;
     max-width: none;
@@ -850,6 +925,58 @@ button {
   }
   .header .header-container .header__content .content-freelancers .freelancers-info .freelancers-btn {
     margin-bottom: 20px;
+  }
+
+  .opportunities .opportunities-container {
+    padding: 30px 10px;
+  }
+  .opportunities .opportunities-container .opportunities__list {
+    align-items: flex-start;
+  }
+  .opportunities .opportunities-container .opportunities__list .list-item .opportunities__descr {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .freelancers .freelancers-container {
+    margin-bottom: 60px;
+  }
+  .freelancers .freelancers-container .freelancers__info {
+    width: 60%;
+  }
+  .freelancers .freelancers-container .freelancers__info .woman-img {
+    width: 80%;
+  }
+  .freelancers .freelancers-container .freelancers__info .amount-wrapper.freelancers {
+    top: 28px;
+    left: 230px;
+    padding: 15px 10px;
+  }
+  .freelancers .freelancers-container .freelancers__info .amount-wrapper.works {
+    right: 20px;
+    bottom: 200px;
+    padding: 10px 15px;
+  }
+  .freelancers .freelancers-container .freelancers__info .amount-wrapper .number {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .freelancers .freelancers-container .freelancers__info .amount-wrapper .text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .freelancers .freelancers-container .freelancers__content .freelancers-descr {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info .info-price span {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info .info-link {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @media screen and (max-width: 767px) {

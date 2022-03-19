@@ -388,7 +388,8 @@ button {
 }
 
 .container {
-  max-width: 1267px;
+  max-width: 1277px;
+  padding: 0 5px;
   margin: 0 auto;
 }
 
@@ -467,7 +468,7 @@ button {
   background-size: 100% 100%;
   position: absolute;
   z-index: 1;
-  top: -100px;
+  top: -102px;
   right: 0px;
   width: 638px;
   height: 600px;
@@ -518,7 +519,7 @@ button {
   padding: 23px 47px 23px 25px;
 }
 .header .header-container .header__content .content-freelancers .freelancers-info .freelancers-search .freelancers-input:placeholder {
-  color: #9D9D9D;
+  color: #9d9d9d;
 }
 .header .header-container .header__content .content-freelancers .freelancers-info .freelancers-search .search-btn {
   position: absolute;
@@ -576,7 +577,7 @@ button {
   font-weight: 500;
 }
 .opportunities .opportunities-container .opportunities__list .list-item .opportunities__descr {
-  color: #9D9D9D;
+  color: #9d9d9d;
   font-size: 24px;
   line-height: 36px;
 }
@@ -649,7 +650,7 @@ button {
   display: flex;
 }
 .works .works-container .title-wrapper .works__slider-btn .slick-arrow {
-  background: #FFFFFF;
+  background: #fff;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   padding: 15px;
@@ -706,7 +707,7 @@ button {
   line-height: 36px;
   font-weight: 400;
   margin-bottom: 30px;
-  color: #9D9D9D;
+  color: #9d9d9d;
 }
 .works .works-container .carousel .slick-track .slick-slide .carousel__item .item-info {
   display: flex;
@@ -816,7 +817,20 @@ button {
   text-align: center;
 }
 .footer .footer-container .footer__copyright .copyright-descr {
-  color: #9D9D9D;
+  color: #9d9d9d;
   font-size: 18px;
   line-height: 27px;
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    width: 95%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 93.75%;
+    max-width: none;
+  }
 }

@@ -827,6 +827,30 @@ button {
     width: 95%;
     max-width: none;
   }
+
+  .header .header-container .header__nav {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .header .header-container .header__content .content-freelancers::after {
+    background-size: 80% 80%;
+    top: -25px;
+  }
+  .header .header-container .header__content .content-freelancers .content-heading {
+    font-size: 55px;
+    line-height: 65px;
+  }
+  .header .header-container .header__content .content-freelancers .content-descr {
+    margin-bottom: 44px;
+  }
+  .header .header-container .header__content .content-freelancers .freelancers-info {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: normal;
+  }
+  .header .header-container .header__content .content-freelancers .freelancers-info .freelancers-btn {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 767px) {
   .container {

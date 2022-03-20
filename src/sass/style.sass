@@ -23,6 +23,8 @@ $color3: #fff
 
 html,body
    background-color: #FDFDFD
+.fixed-page
+   overflow: hidden
 h1,h2,h3,h4,h5,h6
    margin: 0
    padding: 0
@@ -92,7 +94,10 @@ button
                   background-color: $color1
                   border-radius: 10px
          .header__burger
+            display: none
             .burger-menu
+               cursor: pointer
+               z-index: 100
                position: relative
                width: 40px 
                height: 30px
@@ -114,35 +119,48 @@ button
                   top: 0px
                &.open-menu
                   span
-                     opacity: 0.5
-                     transition: 0.5s
+                     opacity: 0
+                     transition: 0.2s
                   &::before
-                     transform: rotate(38deg)
+                     transform: rotate(45deg)
                      top: 13px
-                     transition: 0.4s
+                     transition: 0.2s
                   &::after
-                     transform: rotate(-38deg)
+                     transform: rotate(-45deg)
                      bottom: 13px
-                     transition: 0.4s
+                     transition: 0.2s
             .burger-nav
-               display: none //изм
+               padding-left: 60px
+               z-index: 50
+               display: block //изм
                position: absolute
-               right: 30px
-               // display: block 
+               left: 0
+               top: 0
+               background-color: $color3
+               width: 100%
+               height: 100%
+               left: -110%
+               transition: all 0.2s ease
+               &.open-menu
+                  left: 0
                .burger-logo
-                  .logo-link
-                     .logo
+                  margin: 0px 0px 20px 0px
                .burger-list
-                  display: flex
-                  position: relative
+                  display: block
+                  width: 100%
+                  overflow: hidden
+                  padding: 0
+                  transition: all 0.3s ease
                   z-index: 2
-                  &.menu
                   .menu-item
-                     margin: 0px 0px 0px 36px
-                     font-size: 16px
+                     font-size: 22px
+                     margin-bottom: 40px
                      text-transform: uppercase
                      text-decoration: none
                      .item-link
+                        transition: color 0.3s linear
+                        &:hover
+                           color: $color0
                .burger-btn
                   .btn-link
                      color: $color3
@@ -470,8 +488,6 @@ button
             line-height: $lhFooter
 
 @media screen and (max-width: 1199px)
-   $fzFooter: 18px
-   $lhFooter: 27px
    $fzLittle: 15px // изм
    $lhLittle: 20px // изм
    $fzMid: 20px // изм
@@ -506,7 +522,6 @@ button
                   justify-content: normal
                   .freelancers-btn
                      margin-bottom: 20px
-   
    .opportunities
       .opportunities-container
          padding: 30px 10px
@@ -516,7 +531,6 @@ button
                .opportunities__descr
                   font-size: $fzMid
                   line-height: $lhMid
-
    .freelancers
       .freelancers-container
          margin-bottom: 60px
@@ -543,24 +557,12 @@ button
             .freelancers-descr
                font-size: $fzMid
                line-height: $lhMid
-
    .works
       .works-container
-         .title-wrapper
-            .works__title
-               .works-subtitle
-            .works__slider-btn
-               .slick-arrow
-                  .btn-icon
-                  &.prev
          .carousel
             .slick-track
                .slick-slide
                   .carousel__item
-                     .item-icon
-                        .icon-img
-                     .item-heading
-                     .item-descr
                      .item-info
                         .info-price
                            span
@@ -569,12 +571,219 @@ button
                         .info-link
                            font-size: $fzMid
                            line-height: $lhMid
+
 @media screen and (max-width: 1023px)
-   
+   .header
+      .header-container
+         .header__nav
+            .nav-list,.nav-btn
+               display: none
+            .header__burger
+               display: block
+         .header__content
+            .content-freelancers
+               &::after
+                  background-size: 70% 70%
+                  top: -70px
+                  background-position: top right
+
 @media screen and (max-width: 991px)
-   
+   .header
+      .header-container
+         .header__nav
+            margin-bottom: 60px
+         .header__content
+            .content-freelancers
+               width: 100%
+               &::after
+                  display: none
+               .freelancers-info
+                  flex-direction: row
+                  justify-content: space-between             
+   .opportunities
+      .opportunities-container
+         max-width: 70%
+         padding: 20px
+         .opportunities__list
+            flex-direction: column
+            align-items: center
+            .list-item
+               &:not(:last-child)
+                  margin-bottom: 40px
+   .freelancers
+      .freelancers-container
+         flex-direction: column-reverse
+         justify-content: normal
+         .freelancers__info
+            display: flex
+            justify-content: space-evenly
+            width: 100%
+            .woman-img
+               display: none
+            .amount-wrapper
+               position: static
+               &.freelancers,&.works
+                  padding: 20px
+         .freelancers__content
+            text-align: left
+            width: 100%
+            margin-bottom: 30px
+   .works
+      .works-container
+         .carousel
+            .slick-track
+               .slick-slide
+                  // min-width: 10px
+                  max-width: 100%
+                  margin: 0px 10px
+                  .carousel__item
+                     max-width: 100%
+                     padding: 20px 50px
+                     .item-info
+                        justify-content: space-evenly
+   .footer
+      .footer-container
+         padding-top: 60px
+         .footer__content-list
+            flex-wrap: wrap
+            .footer__list-item
+               margin: 0
+               width: 100% !important
+               .footer__logo
+                  .logo-link
+                     .logo
+                        width: 50%
+               .links-list
+                  display: flex
+                  justify-content: flex-start
+                  .item-link
+                     margin-right: 40px
+                     &.location,&.phone
+                        margin-bottom: 0
+
 @media screen and (max-width: 767px)
+   $fzFooter: 16px
+   $lhFooter: 22px
    .container
       width: 93.75%
       max-width: none
-@media screen and (max-width: 576px)
+   .section-heading
+      text-align: center
+      margin-bottom: 40px
+      font-size: 30px
+      line-height: 40px
+   .header
+      .header-container
+         .header__content
+            .content-freelancers
+               .freelancers-info
+                  flex-direction: column
+                  .freelancers-btn,.freelancers-search
+                     width: 100%
+   .works
+      .works-container
+         .title-wrapper
+            text-align: center
+            flex-direction: column
+            .works__title
+               .works-subtitle
+                  margin-bottom: 30px
+                  font-size: $fzFooter
+                  line-height: $lhFooter
+            .works__slider-btn
+               width: 70%
+               justify-content: space-evenly
+               .slick-arrow
+                  &.prev
+                     margin-right: 0px
+   .footer
+      .footer-container
+         .footer__content-list
+            .footer__list-item
+               .links-list 
+                  justify-content: space-between
+                  .item-link
+                     margin-right: 0
+                     .link
+                        font-size: $fzFooter
+                        line-height: $lhFooter
+
+@media screen and (max-width: 575px)
+   $fzLittle: 12px // изм
+   $lhLittle: 16px // изм
+   $fzMid: 16px // изм
+   $lhMid: 22px // изм
+   $fzBig: 32px // изм
+   $lhBig: 45px // изм
+
+   .header
+      .header-container
+         .header__nav
+            .nav-logo
+               .logo-link
+                  .logo
+                     width: 90%
+            .header__burger
+               .burger-nav
+                  .burger-logo
+                     display: none
+               .burger-list
+                  margin-top: 60px
+         .header__content
+            .content-freelancers
+               .content-heading
+                  font-size: $fzBig
+                  line-height: $fzBig
+               .content-descr
+                  font-size: $fzMid
+                  line-height: $lhMid
+               .freelancers-info
+                  .freelancers-search
+                     .freelancers-input
+                        font-size: $fzMid
+                        line-height: $lhMid
+   .opportunities
+      .opportunities-container
+         max-width: 100%
+   .freelancers
+      .freelancers-container
+         .freelancers__info
+            flex-direction: column
+            .amount-wrapper
+               &.freelancers
+                  margin-bottom: 20px
+   .works
+      .works-container
+         .title-wrapper
+            margin-bottom: 20px
+         .carousel
+            .slick-track
+               .slick-slide
+                  min-width: 0px
+                  .carousel__item
+                     padding: 10px
+                     .item-heading
+                        font-size: 25px
+                     .item-descr
+                        font-size: $fzMid
+                        line-height: $lhMid
+                     .item-info
+                        .info-price
+                           font-size: $fzMid
+                           line-height: $lhMid
+                           span
+                              font-size: 20px
+                              line-height: 25px
+                        .info-link
+                           font-size: $fzMid
+                           line-height: $lhMid
+   .footer
+      .footer-container
+         .footer__content-list
+            .footer__list-item
+               .links-list 
+                  flex-direction: column
+                  justify-content: normal
+                  .item-link
+                     &.location,&.phone
+                        margin-bottom: 20px

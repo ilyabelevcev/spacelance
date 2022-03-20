@@ -18,16 +18,16 @@ $(".carousel").slick({
          breakpoint: 1199,
          settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToScroll: 1,
          }
       },
-      // {
-      //    breakpoint: 600,
-      //    settings: {
-      //       slidesToShow: 2,
-      //       slidesToScroll: 2
-      //    }
-      // },
+      {
+         breakpoint: 991,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+         }
+      },
       // {
       //    breakpoint: 480,
       //    settings: {
@@ -40,6 +40,7 @@ $(".carousel").slick({
 
 $(document).ready(function() {
    $('.burger-menu').click(function() {
-      $('.burger-menu').toggleClass('open-menu')
+      $('.burger-menu, .burger-nav').toggleClass('open-menu')
+      $('body').toggleClass('fixed-page')
    });
 });
